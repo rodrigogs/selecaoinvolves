@@ -15,4 +15,5 @@
 * Build the application first. Jar file will be available at build/libs/selecaoinvolves-1.0.jar
 * cidades.csv must be in the same folder as the jar file.
 * dist folder has a ready to run jar and the csv file.
+
 > java -jar selecaoinvolves-1.0.jar

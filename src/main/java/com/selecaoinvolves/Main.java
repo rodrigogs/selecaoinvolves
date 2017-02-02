@@ -20,10 +20,8 @@ public class Main {
     public static void main(String[] args) {
         scanner = new Scanner(System.in);
         try {
-            String resourcePath = new File(Main.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath()).getParent();
-            if (new File(resourcePath + "/cidades.csv").exists()) {
-                resourcePath = resourcePath + "/cidades.csv";
-            } else {
+            String resourcePath = new File(Main.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath()).getParent() + "/cidades.csv";
+            if (!new File(resourcePath).exists()) {
                 resourcePath = Main.class.getResource("/cidades.csv").getFile();
             }
 

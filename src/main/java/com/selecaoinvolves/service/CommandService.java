@@ -1,11 +1,8 @@
-package com.selecaoinvolves.controller;
+package com.selecaoinvolves.service;
 
 import com.selecaoinvolves.enums.Commands;
+import com.selecaoinvolves.exception.CommandException;
 
-public interface CommandController {
-    String execute(Commands command);
-
-    String execute(Commands command, String property);
-
-    String execute(Commands command, String property, String value);
+public interface CommandService {
+    String execute(Commands command, String input) throws CommandException;
 }
